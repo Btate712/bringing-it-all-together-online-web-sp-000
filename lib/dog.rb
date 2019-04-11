@@ -7,7 +7,7 @@ class Dog
     @id = nil
   end
 
-  def attributes(parms)
+  def self.attributes(parms)
     binding.pry
 
   end
