@@ -19,6 +19,11 @@ class Dog
     self
   end
 
+  def self.create(name:, breed:)
+    self.new(name, breed)
+    self.save
+  end
+  
   def self.create_table
     sql = <<-SQL
       CREATE TABLE dogs (
