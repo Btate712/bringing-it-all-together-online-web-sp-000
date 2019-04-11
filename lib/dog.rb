@@ -7,6 +7,11 @@ class Dog
     @id = nil
   end
 
+  def attributes(parms)
+    binding.pry
+    
+  end
+      
   def self.create_table
     sql = <<-SQL
       CREATE TABLE dogs (
