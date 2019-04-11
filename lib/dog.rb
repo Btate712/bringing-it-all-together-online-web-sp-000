@@ -20,7 +20,7 @@ class Dog
 
   def self.drow_table
     sql = <<-SQL
-      DROP TABLE dogs 
+      DROP TABLE dogs
     SQL
     DB[:conn].execute(sql)
 end
