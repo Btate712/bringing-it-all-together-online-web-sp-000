@@ -24,6 +24,15 @@ class Dog
     new_dog.save
   end
 
+  def self.find_by_id(id)
+    sql = <<-SQL
+      SELECT * 
+      FROM dogs
+      WHERE id = ?
+    SQL
+    self.new_from_db(DB[:conn].execute(sql, id)[0])
+  end
+  
   def self.create_table
     sql = <<-SQL
       CREATE TABLE dogs (
