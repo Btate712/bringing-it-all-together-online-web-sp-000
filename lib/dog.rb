@@ -17,4 +17,10 @@ class Dog
     SQL
     DB[:conn].execute(sql)
   end
+
+  def self.drow_table
+    sql = <<-SQL
+      DROP TABLE dogs 
+    SQL
+    DB[:conn].execute(sql)
 end
