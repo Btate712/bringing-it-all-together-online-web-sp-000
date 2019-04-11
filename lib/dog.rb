@@ -22,7 +22,7 @@ class Dog
   def self.new_from_db(row)
     self.new(id: row[0], name: row[1], breed: row[2])
   end
-  
+
   def self.create(name:, breed:)
     new_dog = self.new(name: name, breed: breed)
     new_dog.save
